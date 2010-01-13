@@ -1,0 +1,18 @@
+
+Overview
+
+  This software searches {{{http://www.flickr.com}Flickr}} for photos
+  taken with your stolen camera. It works by searching for photos with
+  your camera's serial number in the
+  {{{http://en.wikipedia.org/wiki/Exchangeable_image_file_format}EXIF}}
+  data. Note that not all cameras expose the serial number in the EXIF data.
+  
+  <<{{{http://www.mattburns.co.uk/stolencamerafinder/launch.jnlp}Click here to run}}>>
+  
+  I'm currently working on a new version that aims to find stolen cameras even faster.
+  For updates, follow me on twitter: {{{http://twitter.com/stolencamfinder}@stolencamfinder}}
+
+Development
+
+  The project is currently hosted on Google Code {{{http://code.google.com/p/stolencamerafinder/}here}}.
+  Feel free to check out the source and build it with {{{http://maven.apache.org/}Maven}}.
