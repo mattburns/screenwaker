@@ -52,7 +52,7 @@ public class Webstart extends javax.swing.JFrame {
         panel.add(urlField, "growx, wrap");
 
         panel.add(new JLabel("String on page that will wake screen"));
-        errorField = new JTextField("error", 25);
+        errorField = new JTextField("Last Stable", 25);
         panel.add(errorField, "growx, wrap");
         
         panel.add(new JLabel("Polling interval"), "growx");
