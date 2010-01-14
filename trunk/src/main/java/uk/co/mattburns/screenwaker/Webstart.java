@@ -135,32 +135,22 @@ public class Webstart extends javax.swing.JFrame {
             long pollingInterval = TimeUtils.timeFieldsToMillis(hourField, minuteField, secondField);
 
             while (controlButton.getText().equals(STOP)) {
+                boolean stringFound = reader.pageContainsString(errorField.getText()); 
+                String onOrOff = stringFound ? "on" : "off";
+                
+                appendLogText("switching monitor " + onOrOff);
+                try {
+                    Runtime.getRuntime().exec("poweroff monitor_" + onOrOff);
+                } catch (IOException e) {
+                    appendLogText(e.getMessage() + e.getStackTrace());
+                    e.printStackTrace();
+                }
+                
                 try {
                     Thread.sleep(pollingInterval);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    appendLogText(e.getMessage());
                 }
-
-                if (!reader.pageContainsString(errorField.getText())) {
-                    appendLogText("sleeping monitor");
-
-                    try {
-                        Runtime.getRuntime().exec("poweroff monitor_off");
-                    } catch (IOException e) {
-                        appendLogText(e.getMessage() + e.getStackTrace());
-                        e.printStackTrace();
-                    }
-                } else {
-                    appendLogText("waking monitor");
-
-                    try {
-                        Runtime.getRuntime().exec("poweroff monitor_on");
-                    } catch (IOException e) {
-                        appendLogText(e.getMessage() + e.getStackTrace());
-                        e.printStackTrace();
-                    }
-                }
-                
             }
         }
     }
