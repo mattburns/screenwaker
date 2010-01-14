@@ -1,18 +1,18 @@
 
 Overview
 
-  This software searches {{{http://www.flickr.com}Flickr}} for photos
-  taken with your stolen camera. It works by searching for photos with
-  your camera's serial number in the
-  {{{http://en.wikipedia.org/wiki/Exchangeable_image_file_format}EXIF}}
-  data. Note that not all cameras expose the serial number in the EXIF data.
+  This software polls a given URL and will wake up any sleeping screens if a given string is in the source.
   
-  <<{{{http://www.mattburns.co.uk/stolencamerafinder/launch.jnlp}Click here to run}}>>
+  It is a java webstart app but for it to work you will need another exe file somewhere on your system path.
   
-  I'm currently working on a new version that aims to find stolen cameras even faster.
-  For updates, follow me on twitter: {{{http://twitter.com/stolencamfinder}@stolencamfinder}}
-
+  The file is called <<{{{http://www.mattburns.co.uk/screenwaker/poweroff.exe}poweroff.exe}}>>
+  and it is a command line app that can control the screen if found
+  <<{{{http://users.telenet.be/jbosman/poweroff/poweroff.htm}Jorgen Bosman}}>>
+  
+  
+  <<{{{http://www.mattburns.co.uk/screenwaker/launch.jnlp}Click here to run}}>>
+  
 Development
 
-  The project is currently hosted on Google Code {{{http://code.google.com/p/stolencamerafinder/}here}}.
+  The project is currently hosted on Google Code {{{http://code.google.com/p/screenwaker/}here}}.
   Feel free to check out the source and build it with {{{http://maven.apache.org/}Maven}}.
