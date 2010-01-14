@@ -43,7 +43,7 @@ public class TimeUtilsTest {
     }
     
     @Test
-    public void testBadTextFieldsBehaveSameAsZeros() {
+    public void testBadTextFieldsBehaveSameAsZeroes() {
         JTextField one = new JTextField(" ");
         JTextField two = new JTextField("dfsghdsfgh");
         JTextField three = new JTextField("");
