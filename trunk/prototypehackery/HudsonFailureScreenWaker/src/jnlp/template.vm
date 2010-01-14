@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0+" codebase="http://www.mattburns.co.uk/stolencamerafinder" href="$outputFile">
+<jnlp spec="1.0+" codebase="http://www.mattburns.co.uk/screenwaker" href="$outputFile">
  <information>
-    <title>stolencamerafinder</title>
+    <title>screenwaker</title>
     <vendor>mattburns</vendor>
-    <homepage href="http://www.mattburns.co.uk/stolencamerafinder"/>
-    <description kind="one-line">stolencamerafinder</description>
-    <description kind="short">stolencamerafinder</description>
-    <description kind="tooltip">stolencamerafinder</description>
+    <homepage href="http://www.mattburns.co.uk/screenwaker"/>
+    <description kind="one-line">screenwaker</description>
+    <description kind="short">screenwaker</description>
+    <description kind="tooltip">screenwaker</description>
     <icon href="http://www.mattburns.co.uk/images/myIcon.jpeg" kind="default"/>
-    <shortcut online="false"><desktop/><menu submenu="stolencamerafinder"/></shortcut>
+    <shortcut online="false"><desktop/><menu submenu="screenwaker"/></shortcut>
  </information>
  <security>
     <all-permissions/>

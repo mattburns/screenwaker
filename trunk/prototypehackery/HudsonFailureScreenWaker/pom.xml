@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.co.mattburns</groupId>
-	<artifactId>stolencamerafinder</artifactId>
+	<artifactId>screenwaker</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stolencamerafinder</name>
-	<description>Search for photos taken with your camera. This program searches EXIF data for your serial number
+	<name>screenwaker</name>
+	<description>Poll a website and wake the screen if certain text is found
     </description>
-	<url>http://code.google.com/p/stolencamerafinder/</url>
+	<url>http://code.google.com/p/screenwaker/</url>
 	<issueManagement>
 		<system>Google project hosting</system>
-		<url>http://code.google.com/p/stolencamerafinder/issues/list</url>
+		<url>http://code.google.com/p/screenwaker/issues/list</url>
 	</issueManagement>
 	<ciManagement>
 	</ciManagement>
@@ -26,15 +26,11 @@
 				<role>Admin</role>
 			</roles>
 		</developer>
-		<developer>
-			<id>karen</id>
-			<name>Karen Cooper</name>
-		</developer>
 	</developers>
 	<scm>
-		<url>http://stolencamerafinder.googlecode.com/svn/trunk/</url>
-		<connection>scm:svn:http://stolencamerafinder.googlecode.com/svn/trunk/</connection>
-		<developerConnection>scm:svn:https://stolencamerafinder.googlecode.com/svn/trunk/</developerConnection>
+		<url>http://screenwaker.googlecode.com/svn/trunk/</url>
+		<connection>scm:svn:http://screenwaker.googlecode.com/svn/trunk/</connection>
+		<developerConnection>scm:svn:https://screenwaker.googlecode.com/svn/trunk/</developerConnection>
 	</scm>
 	<reporting>
 		<plugins>
@@ -45,17 +41,15 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<distributionManagement>
-		<site>
-			<id>ftp-site</id>
-			<url>ftp://ftp.mattburns.co.uk/htdocs/stolencamerafinder2/</url>
-		</site>
-		<snapshotRepository>
-			<id>ftp-repo</id>
-			<url>ftp://ftp.mattburns.co.uk/htdocs/stolencamerafinder2/</url>
-		</snapshotRepository>
-	</distributionManagement>
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>poweroff.exe</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -99,7 +93,7 @@
 						</excludes>
 					</dependencies>
 					<jnlp>
-						<mainClass>uk.co.mattburns.stolencamerafinder.gui.Webstart</mainClass>
+						<mainClass>uk.co.mattburns.screenwaker.Webstart</mainClass>
 					</jnlp>
 					<sign>
 						<keystore>devkeystore.jks</keystore>
@@ -122,14 +116,14 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.aetrion.flickr</groupId>
-			<artifactId>flickrapi</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.miglayout</groupId>
+			<artifactId>miglayout</artifactId>
+			<version>3.7.2</version>
 		</dependency>
 	</dependencies>
 </project>
