@@ -1,1 +1,1 @@
-mvn clean install webstart:jnlp
+mvn clean install webstart:jnlp site
