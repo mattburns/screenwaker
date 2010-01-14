@@ -41,4 +41,13 @@ public class TimeUtilsTest {
         assertEquals(TimeUtils.hoursMinutesSecondsToMillis(1, 2, 3),
                 TimeUtils.timeFieldsToMillis(one, two, three));
     }
+    
+    @Test
+    public void testBadTextFieldsBehaveSameAsZeros() {
+        JTextField one = new JTextField(" ");
+        JTextField two = new JTextField("dfsghdsfgh");
+        JTextField three = new JTextField("");
+        assertEquals(TimeUtils.hoursMinutesSecondsToMillis(0, 0, 0),
+                TimeUtils.timeFieldsToMillis(one, two, three));
+    }
 }
