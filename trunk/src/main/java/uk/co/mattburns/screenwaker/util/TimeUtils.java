@@ -14,7 +14,12 @@ public class TimeUtils {
 
     private static int getIntFromField(JTextField field) {
         String entry = field.getText().trim();
-        int result = Integer.parseInt(entry);
+        int result = 0;
+        try {
+            result = Integer.parseInt(entry);
+        } catch (Exception e) {
+            // ignore
+        }
         return result;
     }
 }
