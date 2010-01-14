@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 import net.miginfocom.swing.MigLayout;
 import uk.co.mattburns.screenwaker.util.TimeUtils;
@@ -44,6 +45,8 @@ public class Webstart extends javax.swing.JFrame {
     }
 
     private void initComponents() {
+
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         panel = new JPanel(new MigLayout("fill"));
 
