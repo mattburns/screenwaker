@@ -81,9 +81,9 @@ public class Webstart extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (controlButton.getText().equals(START)) {
-                    startSearch();
+                    startPolling();
                 } else {
-                    stopSearch();
+                    stopPolling();
                 }
             }
         });
@@ -93,13 +93,15 @@ public class Webstart extends javax.swing.JFrame {
         this.setBounds(100, 100, 400, 130);
     }
 
-    private void startSearch() {
+    private void startPolling() {
         controlButton.setText(STOP);
+        appendLogText("polling started");
         pollingThread = new Thread(new PollingThread());
         pollingThread.start();
     }
 
-    private void stopSearch() {
+    private void stopPolling() {
+        appendLogText("polling stopped");
         controlButton.setText(START);
     }
 
@@ -160,7 +162,6 @@ public class Webstart extends javax.swing.JFrame {
                 }
                 
             }
-            appendLogText("finished");
         }
     }
 
