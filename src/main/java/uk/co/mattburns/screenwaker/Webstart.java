@@ -60,11 +60,11 @@ public class Webstart extends javax.swing.JFrame {
         panel.add(hourField, "split 6");
         panel.add(new JLabel("h"), "growx");
 
-        minuteField = new JTextField("0", 2);
+        minuteField = new JTextField("1", 2);
         panel.add(minuteField);
         panel.add(new JLabel("m"), "growx");
 
-        secondField = new JTextField("1", 2);
+        secondField = new JTextField("0", 2);
         panel.add(secondField);
         panel.add(new JLabel("s"), "growx, wrap");
 
@@ -87,7 +87,7 @@ public class Webstart extends javax.swing.JFrame {
 
         this.add(panel);
         this.setTitle("ScreenWaker");
-        this.setBounds(100, 100, 300, 150);
+        this.setBounds(100, 100, 400, 130);
     }
 
     private void startSearch() {
@@ -131,7 +131,6 @@ public class Webstart extends javax.swing.JFrame {
 
             while (controlButton.getText().equals(STOP)) {
                 try {
-                    appendLogText("sleeping");
                     Thread.sleep(pollingInterval);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
